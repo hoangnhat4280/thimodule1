@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            color: black;
+            margin: 20px auto;
+            font-size: 14px;
+            border-radius: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h2>Thêm Sách</h2>
+<input type="text" id="bookId" placeholder="Mã số sách">
+<input type="text" id="bookName" placeholder="Tên Sách">
+<input type="number" id="bookPrintYear" placeholder="Năm Xuất Bản">
+<input type="number" id="countOfBook" placeholder="Số quyển">
+<button onclick="addBook()">Thêm Sách</button>
+
+<h2>Mượn Sách</h2>
+<input type="text" id="borrowBookName" placeholder="Nhập Tên">
+<input type="number" id="borrowCountOfBook" placeholder="Nhập số quyển mượn">
+<button onclick="borrowBook()">Mượn Sách</button>
+<br>
+<br>
+<h1 id="title">Danh Sách</h1>
+<table id="bookTable">
+    <thead>
+    <tr>
+        <th>Mã số sách</th>
+        <th>Tên Sách</th>
+        <th>Năm Xuất Bản</th>
+        <th>Số quyển</th>
+        <th>Tình Trạng</th>
+    </tr>
+    </thead>
+    <tbody id="bookTableBody"></tbody>
+
+</table>
+
+
+<script src="Book.js"></script>
+<script src="index.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số lượng phần tử của mảng ít hơn 50");
+    let arr = [];
+    if (n > 0 || n <= 20) {
+        for (let i = 0; i < n; i++) {
+            let a = +prompt("Nhập các giá trị trong mảng");
+            arr.push(a);
+        }
+    } else {
+        n = +prompt("Nhập lại số nguyên lớn hơn 0 và nhỏ hơn hoặc bằng 20");
+    }
+    document.write(arr);
+
+    function average(arr) {
+        let sum = 0;
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                if (i % 2 == 0) {
+                    sum += arr[i];
+                    count++;
+                }
+            }
+        }
+        let averages = sum/count;
+        return averages;
+    }
+    let result = average(arr);
+    document.write(`<br> Trung bình cộng của số lẻ ở vị trí chắn là: ${result}`)
+
+
+</script>
+
+
+</body>
+</html>
